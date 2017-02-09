@@ -33,6 +33,11 @@
     (nil? (k hash))
     false))
 
+;; problem 156
+(defn map-defaults [value keys]
+  "map with default values"
+  {})
+
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]

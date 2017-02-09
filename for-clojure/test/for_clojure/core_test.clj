@@ -43,3 +43,8 @@
     (is (false? (nil-key-value :c {:a nil :b 2})))
     ))
 
+(deftest test-problem-156-map-defaults
+  (testing "build a map with a default value - problem 156"
+    (is (= (map-defaults 0 [:a :b :c]) {:a 0 :b 0 :c 0}))
+    (is (= (map-defaults "x" [1 2 3]) {1 "x" 2 "x" 3 "x"}))
+    (is (= (map-defaults [:a :b] [:foo :bar]) {:foo [:a :b] :bar [:a :b]}))))

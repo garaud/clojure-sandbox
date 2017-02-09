@@ -35,3 +35,11 @@
     (is (= (element-nb [[1 2] [3 4] [5 6]]) 3))
     (is (= (element-nb '(13)) 1))
     (is (= (element-nb '(:a :b :c)) 3))))
+
+(deftest test-problem-134-a-nil-key
+  (testing "return true if there a nil value for a given key"
+    (is (true?  (nil-key-value :a {:a nil :b 2})))
+    (is (false? (nil-key-value :b {:a nil :b 2})))
+    (is (false? (nil-key-value :c {:a nil :b 2})))
+    ))
+

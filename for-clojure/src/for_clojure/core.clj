@@ -26,6 +26,13 @@
   "count the number of elements (count is a restriction)"
   (reduce (fn [acc v] (inc acc)) 0 col))
 
+;; problem 134
+(defn nil-key-value [k hash]
+  "return true if the value of the key is nil"
+  (if (contains? hash k)
+    (nil? (k hash))
+    false))
+
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]

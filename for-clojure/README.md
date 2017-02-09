@@ -16,6 +16,9 @@ To see all the test functions, just do:
 
 `ag --clojure "test-problem-\d+"` or `grep -R "deftest test-problem"`.
 
+I kept the problems where you have to write a function. Other elementary
+problems where you fill a value are not implemented here.
+
 You can just clone the project, remove the content of the file
 `src/for_clojure/core.clj` and implement your own functions/solutions for
 all available test cases.

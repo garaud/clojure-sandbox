@@ -41,7 +41,7 @@
 ;; problem 156
 (defn map-defaults [value keys]
   "map with default values"
-  {})
+  (into {} (map (fn [x] {x value}) keys)))
 
 (defn -main
   "I don't do a whole lot ... yet."

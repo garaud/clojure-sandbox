@@ -16,7 +16,7 @@
     (is (= (last-element ["b" "c" "d"]) "d"))))
 
 (deftest test-problem-20-penultimate-element
-  (testing "penultimate element (last but one)"
+  (testing "penultimate element (last but one) - problem 20"
     (is (= (penultimate (list 1 2 3 4 5)) 4))
     (is (= (penultimate ["a" "b" "c"]) "b"))
     (is (= (penultimate [[1 2] [3 4]]) [1 2]))))
@@ -37,14 +37,14 @@
     (is (= (element-nb '(:a :b :c)) 3))))
 
 (deftest test-problem-134-a-nil-key
-  (testing "return true if there a nil value for a given key"
+  (testing "return true if there a nil value for a given key - problem 134"
     (is (true?  (nil-key-value :a {:a nil :b 2})))
     (is (false? (nil-key-value :b {:a nil :b 2})))
-    (is (false? (nil-key-value :c {:a nil :b 2})))
-    ))
+    (is (false? (nil-key-value :c {:a nil :b 2})))))
 
 (deftest test-problem-156-map-defaults
   (testing "build a map with a default value - problem 156"
     (is (= (map-defaults 0 [:a :b :c]) {:a 0 :b 0 :c 0}))
     (is (= (map-defaults "x" [1 2 3]) {1 "x" 2 "x" 3 "x"}))
     (is (= (map-defaults [:a :b] [:foo :bar]) {:foo [:a :b] :bar [:a :b]}))))
+

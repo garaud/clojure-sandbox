@@ -36,6 +36,11 @@
     (is (= (element-nb '(13)) 1))
     (is (= (element-nb '(:a :b :c)) 3))))
 
+(deftest test-problem-23-reverse-a-sequence
+  (testing "reverse a sequence - problem 23 *special restrictions*: 'reverse' and 'rseq'"
+    (is (= (my-reverse [1 2 3 4 5]) [5 4 3 2 1]))
+    (is (= (my-reverse (sorted-set 5 7 2 7)) '(7 5 2)))
+    (is (= (my-reverse [[1 2][3 4][5 6]]) [[5 6][3 4][1 2]]))))
 
 (deftest test-problem-25-find-odd-numbers
   (testing "find the odd numbers from a sequence - problem 25"

@@ -26,6 +26,11 @@
   "count the number of elements (count is a restriction)"
   (reduce (fn [acc v] (inc acc)) 0 col))
 
+;; problem 23
+(defn my-reverse [col]
+  "reverse a sequence (reverse and rseq are restrictions)"
+  col)
+
 ;; problem 25
 (defn find-odd [seq]
   "find the odd numbers from a sequence"

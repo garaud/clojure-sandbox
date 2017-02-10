@@ -36,6 +36,14 @@
     (is (= (element-nb '(13)) 1))
     (is (= (element-nb '(:a :b :c)) 3))))
 
+
+(deftest test-problem-25-find-odd-numbers
+  (testing "find the odd numbers from a sequence - problem 25"
+    (is (= (find-odd #{1 2 3 4 5}) '(1 3 5)))
+    (is (= (find-odd [4 2 1 6]) '(1)))
+    (is (= (find-odd [2 2 4 6]) '()))
+    (is (= (find-odd [1 1 1 3]) '(1 1 1 3)))))
+
 (deftest test-problem-134-a-nil-key
   (testing "return true if there a nil value for a given key - problem 134"
     (is (true?  (nil-key-value :a {:a nil :b 2})))

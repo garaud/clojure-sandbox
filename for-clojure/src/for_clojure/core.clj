@@ -26,6 +26,11 @@
   "count the number of elements (count is a restriction)"
   (reduce (fn [acc v] (inc acc)) 0 col))
 
+;; problem 25
+(defn find-odd [seq]
+  "find the odd numbers from a sequence"
+  (filter #(= (rem % 2) 1) seq))
+
 ;; problem 134
 (defn nil-key-value [k hash]
   "return true if the value of the key is nil"

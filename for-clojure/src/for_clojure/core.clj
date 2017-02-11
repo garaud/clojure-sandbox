@@ -36,6 +36,11 @@
   "find the odd numbers from a sequence"
   (filter #(= (rem % 2) 1) seq))
 
+;; problem 27
+(defn palindrome? [seq]
+  "is the sequence palindrome?"
+  true)
+
 ;; problem 134
 (defn nil-key-value [k hash]
   "return true if the value of the key is nil"

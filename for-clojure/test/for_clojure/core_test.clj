@@ -49,6 +49,14 @@
     (is (= (find-odd [2 2 4 6]) '()))
     (is (= (find-odd [1 1 1 3]) '(1 1 1 3)))))
 
+(deftest test-problem-27-palindrome-detector
+  (testing "find if the sequence is a palindrome - problem 27"
+    (is (false? (palindrome? '(1 2 3 4 5))))
+    (is (true? (palindrome? "racecar")))
+    (is (true? (palindrome? [:foo :bar :foo])))
+    (is (true? (palindrome? '(1 1 3 3 1 1))))
+    (is (false? (palindrome? '(:a :b :c))))))
+
 (deftest test-problem-134-a-nil-key
   (testing "return true if there a nil value for a given key - problem 134"
     (is (true?  (nil-key-value :a {:a nil :b 2})))

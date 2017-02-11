@@ -29,7 +29,7 @@
 ;; problem 23
 (defn my-reverse [col]
   "reverse a sequence (reverse and rseq are restrictions)"
-  col)
+  (reduce (fn [acc val] (into [val] acc)) [] col))
 
 ;; problem 25
 (defn find-odd [seq]

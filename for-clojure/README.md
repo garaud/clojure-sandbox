@@ -16,6 +16,9 @@ To see all the test functions, just do:
 
 `ag --clojure "test-problem-\d+"` or `grep -R "deftest test-problem"`.
 
+I keep the 4clojure code which checks the function implementations. Thank to all
+project contributors!
+
 I kept the problems where you have to write a function. Other elementary
 problems where you fill a value are not implemented here.
 

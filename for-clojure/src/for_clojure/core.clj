@@ -39,7 +39,7 @@
 ;; problem 27
 (defn palindrome? [seq]
   "is the sequence palindrome?"
-  true)
+  (= seq (reverse seq)))
 
 ;; problem 134
 (defn nil-key-value [k hash]

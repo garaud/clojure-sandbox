@@ -49,6 +49,12 @@
     (is (= (find-odd [2 2 4 6]) '()))
     (is (= (find-odd [1 1 1 3]) '(1 1 1 3)))))
 
+(deftest test-problem-26-fibonacci-sequence
+  (testing "return the first X fibonacci numbers - problem 26"
+    (is (= (fibonacci 3) '(1 1 2)))
+    (is (= (fibonacci 6) '(1 1 2 3 5 8)))
+    (is (= (fibonacci 8) '(1 1 2 3 5 8 13 21)))))
+
 (deftest test-problem-27-palindrome-detector
   (testing "find if the sequence is a palindrome - problem 27"
     (is (false? (palindrome? '(1 2 3 4 5))))

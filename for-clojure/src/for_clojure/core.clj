@@ -36,6 +36,11 @@
   "find the odd numbers from a sequence"
   (filter #(= (rem % 2) 1) seq))
 
+;; problem 26
+(defn fibonacci [n]
+  "return the first N fibonacci numbers."
+  (range n))
+
 ;; problem 27
 (defn palindrome? [col]
   "is the sequence palindrome?"

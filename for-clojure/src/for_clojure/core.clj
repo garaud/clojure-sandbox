@@ -37,9 +37,9 @@
   (filter #(= (rem % 2) 1) seq))
 
 ;; problem 27
-(defn palindrome? [seq]
+(defn palindrome? [col]
   "is the sequence palindrome?"
-  (= seq (reverse seq)))
+  (= (seq col) (reverse col)))
 
 ;; problem 134
 (defn nil-key-value [k hash]

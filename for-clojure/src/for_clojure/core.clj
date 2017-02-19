@@ -49,6 +49,11 @@
   "is the sequence palindrome?"
   (= (seq col) (reverse col)))
 
+;; problem 28
+(defn my-flatten [col]
+  "flatten a sequence"
+  col)
+
 ;; problem 134
 (defn nil-key-value [k hash]
   "return true if the value of the key is nil"

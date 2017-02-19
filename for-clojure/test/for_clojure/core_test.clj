@@ -63,6 +63,12 @@
     (is (true? (palindrome? '(1 1 3 3 1 1))))
     (is (false? (palindrome? '(:a :b :c))))))
 
+(deftest test-problem-28-flatten-sequence
+  (testing "flatten a sequence - problem 28 *special restriction*: 'flatten'"
+    (is (= (my-flatten '((1 2) 3 [4 [5 6]])) '(1 2 3 4 5 6)))
+    (is (= (my-flatten ["a" ["b"] "c"]) '("a" "b" "c")))
+    (is (= (my-flatten '((((:a))))) '(:a)))))
+
 (deftest test-problem-134-a-nil-key
   (testing "return true if there a nil value for a given key - problem 134"
     (is (true?  (nil-key-value :a {:a nil :b 2})))

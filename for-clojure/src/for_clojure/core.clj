@@ -39,7 +39,10 @@
 ;; problem 26
 (defn fibonacci [n]
   "return the first N fibonacci numbers."
-  (range n))
+  (loop [prev 0 cur 1 count n res (list 1)]
+    (if (= count 1)
+      (reverse res)
+      (recur cur (+ prev cur) (dec count) (conj res (+ prev cur))))))
 
 ;; problem 27
 (defn palindrome? [col]

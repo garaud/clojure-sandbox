@@ -62,7 +62,7 @@
 ;; problem 29
 (defn caps [sentence]
   "only return capital letters"
-  sentence)
+  (clojure.string/replace sentence #"[^A-Z]" ""))
 
 ;; problem 38
 (defn max-value [& args]

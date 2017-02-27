@@ -52,7 +52,12 @@
 ;; problem 28
 (defn my-flatten [col]
   "flatten a sequence"
-  col)
+  (letfn [(nested [cur acc]
+            (cond
+              (not (coll? cur)) (conj acc cur)
+              (empty? cur) acc
+              :else (nested (first cur) (nested (rest cur) acc))))]
+    (nested col ())))
 
 ;; problem 134
 (defn nil-key-value [k hash]

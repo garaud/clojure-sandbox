@@ -59,6 +59,11 @@
               :else (nested (first cur) (nested (rest cur) acc))))]
     (nested col ())))
 
+;; problem 29
+(defn caps [sentence]
+  "only return capital letters"
+  sentence)
+
 ;; problem 38
 (defn max-value [& args]
   "maxiumum value"

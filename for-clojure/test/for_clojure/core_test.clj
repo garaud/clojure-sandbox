@@ -69,6 +69,12 @@
     (is (= (my-flatten ["a" ["b"] "c"]) '("a" "b" "c")))
     (is (= (my-flatten '((((:a))))) '(:a)))))
 
+(deftest test-problem-29-get-the-caps
+  (testing "only capital letters - problem 29"
+    (is (= (caps "HeLlO, WoRlD!") "HLOWRD"))
+    (is (empty? (caps "nothing")))
+    (is (= (caps "$#A(*&987Zf") "AZ"))))
+
 (deftest test-problem-38-maximum-value
   (testing "maxiumum value - problem 38 *special restriction*: 'max', 'max-key'"
     (is (= (max-value 1 8 3 4) 8))

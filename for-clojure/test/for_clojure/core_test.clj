@@ -69,6 +69,12 @@
     (is (= (my-flatten ["a" ["b"] "c"]) '("a" "b" "c")))
     (is (= (my-flatten '((((:a))))) '(:a)))))
 
+(deftest test-problem-38-maximum-value
+  (testing "maxiumum value - problem 38 *special restriction*: 'max', 'max-key'"
+    (is (= (max-value 1 8 3 4) 8))
+    (is (= (max-value 30 20) 30))
+    (is (= (max-value 45 67 11) 67))))
+
 (deftest test-problem-134-a-nil-key
   (testing "return true if there a nil value for a given key - problem 134"
     (is (true?  (nil-key-value :a {:a nil :b 2})))

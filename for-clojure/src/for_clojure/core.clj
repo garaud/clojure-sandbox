@@ -59,6 +59,11 @@
               :else (nested (first cur) (nested (rest cur) acc))))]
     (nested col ())))
 
+;; problem 38
+(defn max-value [& args]
+  "maxiumum value"
+  (reduce (fn [m val] (if (> val m) val m)) 0 args))
+
 ;; problem 134
 (defn nil-key-value [k hash]
   "return true if the value of the key is nil"

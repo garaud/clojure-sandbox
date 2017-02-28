@@ -75,6 +75,13 @@
     (is (empty? (caps "nothing")))
     (is (= (caps "$#A(*&987Zf") "AZ"))))
 
+(deftest test-problem-32-duplicate-sequence
+  (testing "duplicate each element of a sequence - problem 32"
+    (is (= (duplicate [1 2 3]) '(1 1 2 2 3 3)))
+    (is (= (duplicate [:a :a :b :b]) '(:a :a :a :a :b :b :b :b)))
+    (is (= (duplicate [[1 2] [3 4]]) '([1 2] [1 2] [3 4] [3 4])))
+    (is (= (duplicate [[1 2] [3 4]]) '([1 2] [1 2] [3 4] [3 4])))))
+
 (deftest test-problem-38-maximum-value
   (testing "maxiumum value - problem 38 *special restriction*: 'max', 'max-key'"
     (is (= (max-value 1 8 3 4) 8))

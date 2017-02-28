@@ -75,6 +75,12 @@
     (is (empty? (caps "nothing")))
     (is (= (caps "$#A(*&987Zf") "AZ"))))
 
+(deftest test-problem-30-compress-sequence
+  (testing "remove consecutive duplicates - problem 30"
+    (is (= (apply str (remove-duplicate "Leeeeeerrroyyy")) "Leroy"))
+    (is (= (remove-duplicate [1 1 2 3 3 2 2 3]) '(1 2 3 2 3)))
+    (is (= (remove-duplicate [[1 2] [1 2] [3 4] [1 2]]) '([1 2] [3 4] [1 2])))))
+
 (deftest test-problem-32-duplicate-sequence
   (testing "duplicate each element of a sequence - problem 32"
     (is (= (duplicate [1 2 3]) '(1 1 2 2 3 3)))

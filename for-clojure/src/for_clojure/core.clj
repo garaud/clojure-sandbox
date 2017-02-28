@@ -64,6 +64,11 @@
   "only return capital letters"
   (clojure.string/replace sentence #"[^A-Z]" ""))
 
+;; problem 30
+(defn remove-duplicate [col]
+  "compress a sequence, remove consecutive duplicates"
+  col)
+
 ;; problem 32
 (defn duplicate [col]
   "duplicate each element of a sequence"

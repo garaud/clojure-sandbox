@@ -67,7 +67,9 @@
 ;; problem 30
 (defn remove-duplicate [col]
   "compress a sequence, remove consecutive duplicates"
-  col)
+  (reverse
+   (reduce
+    (fn [acc val] (if-not (= (first acc) val) (conj acc val) acc)) () col)))
 
 ;; problem 32
 (defn duplicate [col]

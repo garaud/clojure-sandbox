@@ -71,6 +71,11 @@
    (reduce
     (fn [acc val] (if-not (= (first acc) val) (conj acc val) acc)) () col)))
 
+;; problem 31
+(defn pack-duplicate [col]
+  "pack consecutive duplicates elements"
+  col)
+
 ;; problem 32
 (defn duplicate [col]
   "duplicate each element of a sequence"

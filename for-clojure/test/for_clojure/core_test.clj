@@ -81,6 +81,12 @@
     (is (= (remove-duplicate [1 1 2 3 3 2 2 3]) '(1 2 3 2 3)))
     (is (= (remove-duplicate [[1 2] [1 2] [3 4] [1 2]]) '([1 2] [3 4] [1 2])))))
 
+(deftest test-problem-31-pack-a-sequence
+  (testing "pack consecutive duplicates into sub-lists - problem 31"
+    (is (= (pack-duplicate [1 1 2 1 1 1 3 3]) '((1 1) (2) (1 1 1) (3 3))))
+    (is (= (pack-duplicate [:a :a :b :b :c]) '((:a :a) (:b :b) (:c))))
+    (is (= (pack-duplicate [[1 2] [1 2] [3 4]]) '(([1 2] [1 2]) ([3 4]))))))
+
 (deftest test-problem-32-duplicate-sequence
   (testing "duplicate each element of a sequence - problem 32"
     (is (= (duplicate [1 2 3]) '(1 1 2 2 3 3)))

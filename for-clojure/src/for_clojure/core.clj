@@ -67,7 +67,7 @@
 ;; problem 32
 (defn duplicate [col]
   "duplicate each element of a sequence"
-  col)
+  (reverse (reduce (fn [acc val] (conj acc val val)) () col)))
 
 ;; problem 38
 (defn max-value [& args]

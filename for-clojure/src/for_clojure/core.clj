@@ -74,7 +74,22 @@
 ;; problem 31
 (defn pack-duplicate [col]
   "pack consecutive duplicates into sub-lists"
-  col)
+  (loop [col col
+         prev (first col)
+         cur (second col)
+         seq ()
+         res ()]
+    (if (empty? col)
+      (reverse (conj res seq))
+      (recur (rest col) ; col
+             cur ; prev
+             (second col) ; cur
+             (if (= cur prev)
+               (conj seq cur)
+               (list cur)) ; seq
+             (if (= cur prev)
+               res
+               (conj res seq))))))
 
 ;; problem 32
 (defn duplicate [col]

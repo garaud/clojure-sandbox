@@ -73,7 +73,7 @@
 
 ;; problem 31
 (defn pack-duplicate [col]
-  "pack consecutive duplicates elements"
+  "pack consecutive duplicates into sub-lists"
   col)
 
 ;; problem 32

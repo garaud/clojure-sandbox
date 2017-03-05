@@ -96,6 +96,11 @@
   "duplicate each element of a sequence"
   (reverse (reduce (fn [acc val] (conj acc val val)) () col)))
 
+;; problem 33
+(defn my-replicate [col n]
+  "replicate each element of a sequence"
+  col)
+
 ;; problem 38
 (defn max-value [& args]
   "maxiumum value"

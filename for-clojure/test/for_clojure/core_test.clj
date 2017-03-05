@@ -94,6 +94,14 @@
     (is (= (duplicate [[1 2] [3 4]]) '([1 2] [1 2] [3 4] [3 4])))
     (is (= (duplicate [[1 2] [3 4]]) '([1 2] [1 2] [3 4] [3 4])))))
 
+(deftest test-problem-33-replicate-sequence
+  (testing "replicate each element of a sequence - problem 33"
+   (is (= (my-replicate [1 2 3] 2) '(1 1 2 2 3 3)))
+   (is (= (my-replicate [:a :b] 4) '(:a :a :a :a :b :b :b :b)))
+   (is (= (my-replicate [4 5 6] 1) '(4 5 6)))
+   (is (= (my-replicate [[1 2] [3 4]] 2) '([1 2] [1 2] [3 4] [3 4])))
+   (is (= (my-replicate [44 33] 2) [44 44 33 33]))))
+
 (deftest test-problem-38-maximum-value
   (testing "maxiumum value - problem 38 *special restriction*: 'max', 'max-key'"
     (is (= (max-value 1 8 3 4) 8))

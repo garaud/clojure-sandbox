@@ -102,6 +102,12 @@
    (is (= (my-replicate [[1 2] [3 4]] 2) '([1 2] [1 2] [3 4] [3 4])))
    (is (= (my-replicate [44 33] 2) [44 44 33 33]))))
 
+(deftest test-problem-34-range-integers
+  (testing "list of all integers in a given range - problem 34 *special restriction*: 'range'"
+    (is (= (my-range 1 4) '(1 2 3)))
+    (is (= (my-range -2 2) '(-2 -1 0 1)))
+    (is (= (my-range 5 8) '(5 6 7)))))
+
 (deftest test-problem-38-maximum-value
   (testing "maxiumum value - problem 38 *special restriction*: 'max', 'max-key'"
     (is (= (max-value 1 8 3 4) 8))

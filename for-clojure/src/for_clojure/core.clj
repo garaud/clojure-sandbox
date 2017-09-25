@@ -102,6 +102,11 @@
   (reduce (fn [acc v] (concat acc v))
           (into [] (map (fn [val] (repeat n val)) col))))
 
+;; problem 34
+(defn my-range [start stop]
+  "create a list of all integers in a given range"
+  [])
+
 ;; problem 38
 (defn max-value [& args]
   "maxiumum value"

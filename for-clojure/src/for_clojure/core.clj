@@ -100,7 +100,7 @@
 (defn my-replicate [col n]
   "replicate each element of a sequence"
   (reduce (fn [acc v] (concat acc v))
-          (into [] (map (fn [val] (repeat n val))) col)))
+          (into [] (map (fn [val] (repeat n val)) col))))
 
 ;; problem 38
 (defn max-value [& args]
